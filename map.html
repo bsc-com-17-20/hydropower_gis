@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d1a6ba47183a2c98789bbb69746a03c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5d1a6ba47183a2c98789bbb69746a03c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5d1a6ba47183a2c98789bbb69746a03c = L.map(
+                "map_5d1a6ba47183a2c98789bbb69746a03c",
+                {
+                    center: [-13.5, 34.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e0ca2b422af6cbb2f8d4e5db5e39253a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_e0ca2b422af6cbb2f8d4e5db5e39253a.addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var marker_06043b3a07f378023d728f27fd82a88f = L.marker(
+                [8333981.8011, 737909.0144],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_58452a6d7a8ce1500324f558aa456dab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_06043b3a07f378023d728f27fd82a88f.setIcon(icon_58452a6d7a8ce1500324f558aa456dab);
+        
+    
+        var popup_5015b41b51c75f5aa354a7938a58fd5d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b957f2480a5dc684c34695429bcdb570 = $(`<div id="html_b957f2480a5dc684c34695429bcdb570" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_5015b41b51c75f5aa354a7938a58fd5d.setContent(html_b957f2480a5dc684c34695429bcdb570);
+            
+        
+
+        marker_06043b3a07f378023d728f27fd82a88f.bindPopup(popup_5015b41b51c75f5aa354a7938a58fd5d)
+        ;
+
+        
+    
+    
+            var marker_16995f04a55a545b10bda052da029447 = L.marker(
+                [8297108.3379, 703002.0283],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_785bc6c4797942cbac85d76f4b7555cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_16995f04a55a545b10bda052da029447.setIcon(icon_785bc6c4797942cbac85d76f4b7555cf);
+        
+    
+        var popup_d0ef0db09101107b54dafef75bbf8eb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b6296e8f1b12f04454f43c605239bd3 = $(`<div id="html_1b6296e8f1b12f04454f43c605239bd3" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_d0ef0db09101107b54dafef75bbf8eb6.setContent(html_1b6296e8f1b12f04454f43c605239bd3);
+            
+        
+
+        marker_16995f04a55a545b10bda052da029447.bindPopup(popup_d0ef0db09101107b54dafef75bbf8eb6)
+        ;
+
+        
+    
+    
+            var marker_73ef6f9bbbc70b3e758835cfb52cad79 = L.marker(
+                [8277826.1841, 688542.036],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_58f0488472f2d92f13b384f80206f8cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_73ef6f9bbbc70b3e758835cfb52cad79.setIcon(icon_58f0488472f2d92f13b384f80206f8cc);
+        
+    
+        var popup_1d8ca630642999bb656c4b61a0546383 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29d025d7312528bada6f4cb7f67279bf = $(`<div id="html_29d025d7312528bada6f4cb7f67279bf" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_1d8ca630642999bb656c4b61a0546383.setContent(html_29d025d7312528bada6f4cb7f67279bf);
+            
+        
+
+        marker_73ef6f9bbbc70b3e758835cfb52cad79.bindPopup(popup_1d8ca630642999bb656c4b61a0546383)
+        ;
+
+        
+    
+    
+            var marker_8cc6f51b94f275a865468c1ae6009934 = L.marker(
+                [8277826.1841, 688542.036],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_f72c64d80e6aeceb783d50594a83772b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8cc6f51b94f275a865468c1ae6009934.setIcon(icon_f72c64d80e6aeceb783d50594a83772b);
+        
+    
+        var popup_ce116fa1d0b8e9d5fab3554c938742e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43b4b1bf992a5da42d2fe931f67c216f = $(`<div id="html_43b4b1bf992a5da42d2fe931f67c216f" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_ce116fa1d0b8e9d5fab3554c938742e3.setContent(html_43b4b1bf992a5da42d2fe931f67c216f);
+            
+        
+
+        marker_8cc6f51b94f275a865468c1ae6009934.bindPopup(popup_ce116fa1d0b8e9d5fab3554c938742e3)
+        ;
+
+        
+    
+    
+            var marker_7a02ad84f479177a0b28e5dc8d19ccd9 = L.marker(
+                [8232902.5119, 690927.7793],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_01d5f252fc994b44eebde2cea45a7980 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7a02ad84f479177a0b28e5dc8d19ccd9.setIcon(icon_01d5f252fc994b44eebde2cea45a7980);
+        
+    
+        var popup_bb8408ede0c2ced32f3c7dc648de6a9a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3cf35f682170ba1cc2842981072bde80 = $(`<div id="html_3cf35f682170ba1cc2842981072bde80" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_bb8408ede0c2ced32f3c7dc648de6a9a.setContent(html_3cf35f682170ba1cc2842981072bde80);
+            
+        
+
+        marker_7a02ad84f479177a0b28e5dc8d19ccd9.bindPopup(popup_bb8408ede0c2ced32f3c7dc648de6a9a)
+        ;
+
+        
+    
+    
+            var marker_defd5c18ef44e36303bd7ab92a87e507 = L.marker(
+                [8297106.0321, 703017.0503],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_66e3b9131eb21f0d6b7667f199e53b7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_defd5c18ef44e36303bd7ab92a87e507.setIcon(icon_66e3b9131eb21f0d6b7667f199e53b7d);
+        
+    
+        var popup_0d6a3c0799cdaa3d8d1bd5f64006ad65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85b087bbb92fb4122e60d644a7c5369a = $(`<div id="html_85b087bbb92fb4122e60d644a7c5369a" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_0d6a3c0799cdaa3d8d1bd5f64006ad65.setContent(html_85b087bbb92fb4122e60d644a7c5369a);
+            
+        
+
+        marker_defd5c18ef44e36303bd7ab92a87e507.bindPopup(popup_0d6a3c0799cdaa3d8d1bd5f64006ad65)
+        ;
+
+        
+    
+    
+            var marker_651a6f35224d544c49d68521d9bffd5a = L.marker(
+                [8296767.8313, 703524.3515],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_9a759c5311611ebdb17c37fd792988a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_651a6f35224d544c49d68521d9bffd5a.setIcon(icon_9a759c5311611ebdb17c37fd792988a9);
+        
+    
+        var popup_a93c66a34156960864e551e5976ca36f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b2005966fa8d89033c9b306dcbcbb72 = $(`<div id="html_8b2005966fa8d89033c9b306dcbcbb72" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_a93c66a34156960864e551e5976ca36f.setContent(html_8b2005966fa8d89033c9b306dcbcbb72);
+            
+        
+
+        marker_651a6f35224d544c49d68521d9bffd5a.bindPopup(popup_a93c66a34156960864e551e5976ca36f)
+        ;
+
+        
+    
+    
+            var marker_a028296b6e6756f6cae258599f82da7a = L.marker(
+                [8204937.3085, 746349.7278],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_f2bcee7587eb84d0c13885e4582fe0c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a028296b6e6756f6cae258599f82da7a.setIcon(icon_f2bcee7587eb84d0c13885e4582fe0c6);
+        
+    
+        var popup_55e572f3f86deff65e0ec81b84394676 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8459cf316bd03e6ca98c9fa4a1ef50b9 = $(`<div id="html_8459cf316bd03e6ca98c9fa4a1ef50b9" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_55e572f3f86deff65e0ec81b84394676.setContent(html_8459cf316bd03e6ca98c9fa4a1ef50b9);
+            
+        
+
+        marker_a028296b6e6756f6cae258599f82da7a.bindPopup(popup_55e572f3f86deff65e0ec81b84394676)
+        ;
+
+        
+    
+    
+            var marker_ffc5a0957662a1a0aa4f9b3b30395813 = L.marker(
+                [8242708.1288, 687295.855],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_b311ba5a0040d9401007903a8e6b2198 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ffc5a0957662a1a0aa4f9b3b30395813.setIcon(icon_b311ba5a0040d9401007903a8e6b2198);
+        
+    
+        var popup_9f87db7a54a932aa7d997150efee3a0f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26c366371abaa5e8102a71bf3c4a4d9a = $(`<div id="html_26c366371abaa5e8102a71bf3c4a4d9a" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_9f87db7a54a932aa7d997150efee3a0f.setContent(html_26c366371abaa5e8102a71bf3c4a4d9a);
+            
+        
+
+        marker_ffc5a0957662a1a0aa4f9b3b30395813.bindPopup(popup_9f87db7a54a932aa7d997150efee3a0f)
+        ;
+
+        
+    
+    
+            var marker_2fb1ec677715c0b3905173b586ad9cc3 = L.marker(
+                [8233031.1777, 690924.7116],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_5ae67666f4b909247f2ba56d3ba2fe29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2fb1ec677715c0b3905173b586ad9cc3.setIcon(icon_5ae67666f4b909247f2ba56d3ba2fe29);
+        
+    
+        var popup_cbfe1eaba57f287de45d1e44d94513d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_858b27485ff1de063d65e42e865acc2b = $(`<div id="html_858b27485ff1de063d65e42e865acc2b" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_cbfe1eaba57f287de45d1e44d94513d8.setContent(html_858b27485ff1de063d65e42e865acc2b);
+            
+        
+
+        marker_2fb1ec677715c0b3905173b586ad9cc3.bindPopup(popup_cbfe1eaba57f287de45d1e44d94513d8)
+        ;
+
+        
+    
+    
+            var marker_c5aa9b053efda348b14aeb4b98f0649d = L.marker(
+                [8854460.1494, 622480.5664],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_80cd0991b9ee906920e55302bfc53f7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c5aa9b053efda348b14aeb4b98f0649d.setIcon(icon_80cd0991b9ee906920e55302bfc53f7f);
+        
+    
+        var popup_bd4171c68137a592c2af4769b6c61c22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dcc4da761665f243de1f2ec489f7da2b = $(`<div id="html_dcc4da761665f243de1f2ec489f7da2b" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_bd4171c68137a592c2af4769b6c61c22.setContent(html_dcc4da761665f243de1f2ec489f7da2b);
+            
+        
+
+        marker_c5aa9b053efda348b14aeb4b98f0649d.bindPopup(popup_bd4171c68137a592c2af4769b6c61c22)
+        ;
+
+        
+    
+    
+            var marker_1ea80534cc1d8793ed83de4854e057a4 = L.marker(
+                [8809744.8831, 630174.6126],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_8cfee51a6ee6d3e0572a54df8661aa8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1ea80534cc1d8793ed83de4854e057a4.setIcon(icon_8cfee51a6ee6d3e0572a54df8661aa8e);
+        
+    
+        var popup_438496d121ec91bf7dde07ea3e008364 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_523457fee165936c78c07f3c3e02f27e = $(`<div id="html_523457fee165936c78c07f3c3e02f27e" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_438496d121ec91bf7dde07ea3e008364.setContent(html_523457fee165936c78c07f3c3e02f27e);
+            
+        
+
+        marker_1ea80534cc1d8793ed83de4854e057a4.bindPopup(popup_438496d121ec91bf7dde07ea3e008364)
+        ;
+
+        
+    
+    
+            var marker_7128ec7c73c1706e2dfec79c967dcef2 = L.marker(
+                [8543589.9614, 577658.5072],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_87c7341bda874e1ea70b131820f0ebc5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7128ec7c73c1706e2dfec79c967dcef2.setIcon(icon_87c7341bda874e1ea70b131820f0ebc5);
+        
+    
+        var popup_a935c9e5006c89f796688e42b9a2836d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ba837037c4a90fcca56af782f74e5bb = $(`<div id="html_5ba837037c4a90fcca56af782f74e5bb" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_a935c9e5006c89f796688e42b9a2836d.setContent(html_5ba837037c4a90fcca56af782f74e5bb);
+            
+        
+
+        marker_7128ec7c73c1706e2dfec79c967dcef2.bindPopup(popup_a935c9e5006c89f796688e42b9a2836d)
+        ;
+
+        
+    
+    
+            var marker_d0ece8db2d9d3fdb79facb10af4d4cc6 = L.marker(
+                [8556787.7261, 590856.2719],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_689c15acaa35c534caf1f75f7ec52205 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d0ece8db2d9d3fdb79facb10af4d4cc6.setIcon(icon_689c15acaa35c534caf1f75f7ec52205);
+        
+    
+        var popup_d438a009f57744722ac5f33e678d142e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db265d3c3cef3a0267cbfc2c00b19cd6 = $(`<div id="html_db265d3c3cef3a0267cbfc2c00b19cd6" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_d438a009f57744722ac5f33e678d142e.setContent(html_db265d3c3cef3a0267cbfc2c00b19cd6);
+            
+        
+
+        marker_d0ece8db2d9d3fdb79facb10af4d4cc6.bindPopup(popup_d438a009f57744722ac5f33e678d142e)
+        ;
+
+        
+    
+    
+            var marker_855b52dc149ae47b1e7c848bc27679f6 = L.marker(
+                [8577134.2801, 618076.6616],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_85f88a3b2e4dc9937f82be8c6b312758 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_855b52dc149ae47b1e7c848bc27679f6.setIcon(icon_85f88a3b2e4dc9937f82be8c6b312758);
+        
+    
+        var popup_f8ed25123bcdb5bd6fb1a0e6ea18ec66 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdc2fb062c23f5d949ca971fc7c2178b = $(`<div id="html_bdc2fb062c23f5d949ca971fc7c2178b" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_f8ed25123bcdb5bd6fb1a0e6ea18ec66.setContent(html_bdc2fb062c23f5d949ca971fc7c2178b);
+            
+        
+
+        marker_855b52dc149ae47b1e7c848bc27679f6.bindPopup(popup_f8ed25123bcdb5bd6fb1a0e6ea18ec66)
+        ;
+
+        
+    
+    
+            var marker_a8750fe23ae42bebcb434f544a61d188 = L.marker(
+                [8581258.5815, 621926.0097],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_a675d152d57b7af837b2f4f24702fb07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a8750fe23ae42bebcb434f544a61d188.setIcon(icon_a675d152d57b7af837b2f4f24702fb07);
+        
+    
+        var popup_588877df1784fcc814367bf1828c968a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5eb6e437a5c37b3512419964b7691865 = $(`<div id="html_5eb6e437a5c37b3512419964b7691865" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_588877df1784fcc814367bf1828c968a.setContent(html_5eb6e437a5c37b3512419964b7691865);
+            
+        
+
+        marker_a8750fe23ae42bebcb434f544a61d188.bindPopup(popup_588877df1784fcc814367bf1828c968a)
+        ;
+
+        
+    
+    
+            var marker_98091495a6a744b16899443096754cc2 = L.marker(
+                [8787198.7017, 596080.3871],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_ab6b2117ca892bf4daf83dd8fc54c530 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_98091495a6a744b16899443096754cc2.setIcon(icon_ab6b2117ca892bf4daf83dd8fc54c530);
+        
+    
+        var popup_c41a2a897c7bef059f4375ccf252e6df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82dc765895eb340ead12a0de3d7450a0 = $(`<div id="html_82dc765895eb340ead12a0de3d7450a0" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_c41a2a897c7bef059f4375ccf252e6df.setContent(html_82dc765895eb340ead12a0de3d7450a0);
+            
+        
+
+        marker_98091495a6a744b16899443096754cc2.bindPopup(popup_c41a2a897c7bef059f4375ccf252e6df)
+        ;
+
+        
+    
+    
+            var marker_81fa3f0a202b2a4aaa3e9cdbe0b88146 = L.marker(
+                [8780324.866, 594430.6665],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_ed94645a8328c579282efa7319da4c79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_81fa3f0a202b2a4aaa3e9cdbe0b88146.setIcon(icon_ed94645a8328c579282efa7319da4c79);
+        
+    
+        var popup_5ba67005ef8c54c8428e9a20d52ae88c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_265a509d8a8e5f05c99627748161b455 = $(`<div id="html_265a509d8a8e5f05c99627748161b455" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_5ba67005ef8c54c8428e9a20d52ae88c.setContent(html_265a509d8a8e5f05c99627748161b455);
+            
+        
+
+        marker_81fa3f0a202b2a4aaa3e9cdbe0b88146.bindPopup(popup_5ba67005ef8c54c8428e9a20d52ae88c)
+        ;
+
+        
+    
+    
+            var marker_0c6b53b37db3ab1eb682f420f0bdbdec = L.marker(
+                [8303876.2827, 715695.2338],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_1f2dbbcc1697cbff71561793bbcf4917 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0c6b53b37db3ab1eb682f420f0bdbdec.setIcon(icon_1f2dbbcc1697cbff71561793bbcf4917);
+        
+    
+        var popup_304d531e48ad0dca4170593d636bde55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d99ff865e938723066bce0c437ae8e64 = $(`<div id="html_d99ff865e938723066bce0c437ae8e64" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_304d531e48ad0dca4170593d636bde55.setContent(html_d99ff865e938723066bce0c437ae8e64);
+            
+        
+
+        marker_0c6b53b37db3ab1eb682f420f0bdbdec.bindPopup(popup_304d531e48ad0dca4170593d636bde55)
+        ;
+
+        
+    
+    
+            var marker_fe795695b5eb47ee619e39b6482a464c = L.marker(
+                [8939485.7639, 568967.3673],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_dd974e3a083757fe1118d203c3aef4eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fe795695b5eb47ee619e39b6482a464c.setIcon(icon_dd974e3a083757fe1118d203c3aef4eb);
+        
+    
+        var popup_011b200981f8c92327c442e5ea606ee3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_befa2f4774a05bdebe4acfd762c18e1b = $(`<div id="html_befa2f4774a05bdebe4acfd762c18e1b" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_011b200981f8c92327c442e5ea606ee3.setContent(html_befa2f4774a05bdebe4acfd762c18e1b);
+            
+        
+
+        marker_fe795695b5eb47ee619e39b6482a464c.bindPopup(popup_011b200981f8c92327c442e5ea606ee3)
+        ;
+
+        
+    
+    
+            var marker_bf4cedf4c9581be6f8b0afff9f0620ef = L.marker(
+                [8648200.8594, 608614.2539],
+                {}
+            ).addTo(map_5d1a6ba47183a2c98789bbb69746a03c);
+        
+    
+            var icon_0ea6eec767d41d51b661fa7c39582a05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bf4cedf4c9581be6f8b0afff9f0620ef.setIcon(icon_0ea6eec767d41d51b661fa7c39582a05);
+        
+    
+        var popup_56fc7c58a6614a9155d355e2306c974d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a349f958dd9706e3f02d6d2679485e0 = $(`<div id="html_4a349f958dd9706e3f02d6d2679485e0" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_56fc7c58a6614a9155d355e2306c974d.setContent(html_4a349f958dd9706e3f02d6d2679485e0);
+            
+        
+
+        marker_bf4cedf4c9581be6f8b0afff9f0620ef.bindPopup(popup_56fc7c58a6614a9155d355e2306c974d)
+        ;
+
+        
+    
+</script>
+</html>
