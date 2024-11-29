@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9ba854c39e2dcad891346c0bf3da9af7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9ba854c39e2dcad891346c0bf3da9af7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9ba854c39e2dcad891346c0bf3da9af7 = L.map(
+                "map_9ba854c39e2dcad891346c0bf3da9af7",
+                {
+                    center: [-13.5, 34.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_92334818fbfbfc6a30a750503a978360 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_92334818fbfbfc6a30a750503a978360.addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var marker_3826624431a38ea6e43581bf379caa33 = L.marker(
+                [-15.060082054299585, 35.213046203041216],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_f9ac9cb242c92cddbf6569c52570fc52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3826624431a38ea6e43581bf379caa33.setIcon(icon_f9ac9cb242c92cddbf6569c52570fc52);
+        
+    
+        var popup_cfd916506d72396b411cf91fb9d52893 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38cd93145d310050916ea162e96be1d7 = $(`<div id="html_38cd93145d310050916ea162e96be1d7" style="width: 100.0%; height: 100.0%;">Scheme Name: Kamuzu Barrage<br>Status: Kamuzu</div>`)[0];
+                popup_cfd916506d72396b411cf91fb9d52893.setContent(html_38cd93145d310050916ea162e96be1d7);
+            
+        
+
+        marker_3826624431a38ea6e43581bf379caa33.bindPopup(popup_cfd916506d72396b411cf91fb9d52893)
+        ;
+
+        
+    
+    
+            var marker_1185d3aadcd88475d9f1f9addbec50a8 = L.marker(
+                [-15.396236249771718, 34.8914506619765],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_2b52193716fdebc1e2a694aa12f2ff9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1185d3aadcd88475d9f1f9addbec50a8.setIcon(icon_2b52193716fdebc1e2a694aa12f2ff9b);
+        
+    
+        var popup_c77019fa4532211c5f9b8da0b98356d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b84f80cd98d198a5378e01bfe729f189 = $(`<div id="html_b84f80cd98d198a5378e01bfe729f189" style="width: 100.0%; height: 100.0%;">Scheme Name: Nkula B<br>Status: Existing</div>`)[0];
+                popup_c77019fa4532211c5f9b8da0b98356d2.setContent(html_b84f80cd98d198a5378e01bfe729f189);
+            
+        
+
+        marker_1185d3aadcd88475d9f1f9addbec50a8.bindPopup(popup_c77019fa4532211c5f9b8da0b98356d2)
+        ;
+
+        
+    
+    
+            var marker_390523399a2e6256da2559f0137c32e1 = L.marker(
+                [-15.571599591296954, 34.7582402673157],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_1f06afe2466599772292d39754ff90aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_390523399a2e6256da2559f0137c32e1.setIcon(icon_1f06afe2466599772292d39754ff90aa);
+        
+    
+        var popup_74186c0a9503f8d01fb3bb1f115d57c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d916cca2762e29f3f7faf7cfa4a06fa6 = $(`<div id="html_d916cca2762e29f3f7faf7cfa4a06fa6" style="width: 100.0%; height: 100.0%;">Scheme Name: Tedzani I & II<br>Status: Existing</div>`)[0];
+                popup_74186c0a9503f8d01fb3bb1f115d57c9.setContent(html_d916cca2762e29f3f7faf7cfa4a06fa6);
+            
+        
+
+        marker_390523399a2e6256da2559f0137c32e1.bindPopup(popup_74186c0a9503f8d01fb3bb1f115d57c9)
+        ;
+
+        
+    
+    
+            var marker_d9d547ede7dc68e079a036854d27e9d4 = L.marker(
+                [-15.571599591296954, 34.7582402673157],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_3f8e3507136f93302687f69e42372e42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d9d547ede7dc68e079a036854d27e9d4.setIcon(icon_3f8e3507136f93302687f69e42372e42);
+        
+    
+        var popup_caa1b77046642c1cad3f7b2ff35bef78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_799bd197ae8b3ef7bd7ab0502d204c19 = $(`<div id="html_799bd197ae8b3ef7bd7ab0502d204c19" style="width: 100.0%; height: 100.0%;">Scheme Name: Tedzani III<br>Status: Existing</div>`)[0];
+                popup_caa1b77046642c1cad3f7b2ff35bef78.setContent(html_799bd197ae8b3ef7bd7ab0502d204c19);
+            
+        
+
+        marker_d9d547ede7dc68e079a036854d27e9d4.bindPopup(popup_caa1b77046642c1cad3f7b2ff35bef78)
+        ;
+
+        
+    
+    
+            var marker_5cfc167062002924e6b35daf2e1d49ea = L.marker(
+                [-15.97739267927941, 34.78402676873572],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_a212106e0810a480b8ba784420d6c9f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5cfc167062002924e6b35daf2e1d49ea.setIcon(icon_a212106e0810a480b8ba784420d6c9f6);
+        
+    
+        var popup_07cbf63fc38c36312ec05320d73cf02a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_472c52da76f86c2e9875e8b953fc0cca = $(`<div id="html_472c52da76f86c2e9875e8b953fc0cca" style="width: 100.0%; height: 100.0%;">Scheme Name: Kapichira I<br>Status: Existing</div>`)[0];
+                popup_07cbf63fc38c36312ec05320d73cf02a.setContent(html_472c52da76f86c2e9875e8b953fc0cca);
+            
+        
+
+        marker_5cfc167062002924e6b35daf2e1d49ea.bindPopup(popup_07cbf63fc38c36312ec05320d73cf02a)
+        ;
+
+        
+    
+    
+            var marker_528f592ef66a7420eff1930df8b2b964 = L.marker(
+                [-15.396255896307258, 34.89159076149684],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_0cbd312f72e73a13dcfbc27d5716251a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_528f592ef66a7420eff1930df8b2b964.setIcon(icon_0cbd312f72e73a13dcfbc27d5716251a);
+        
+    
+        var popup_fdf02f0a50bb121980af40da4cdbf92a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32101f64104129fe69bb5e7fd6fc6bf1 = $(`<div id="html_32101f64104129fe69bb5e7fd6fc6bf1" style="width: 100.0%; height: 100.0%;">Scheme Name: Nkula A<br>Status: Existing</div>`)[0];
+                popup_fdf02f0a50bb121980af40da4cdbf92a.setContent(html_32101f64104129fe69bb5e7fd6fc6bf1);
+            
+        
+
+        marker_528f592ef66a7420eff1930df8b2b964.bindPopup(popup_fdf02f0a50bb121980af40da4cdbf92a)
+        ;
+
+        
+    
+    
+            var marker_9839ec8c5b35b7a1b372d27b8397b0ca = L.marker(
+                [-15.399271854256476, 34.89634332507008],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_1f6d8e1fd70e97a894a23de0198b5c22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9839ec8c5b35b7a1b372d27b8397b0ca.setIcon(icon_1f6d8e1fd70e97a894a23de0198b5c22);
+        
+    
+        var popup_77f9c8349fc682f365b4352a9bc606c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fab4ae6f4fdcd780a97f8c38c4a9a08a = $(`<div id="html_fab4ae6f4fdcd780a97f8c38c4a9a08a" style="width: 100.0%; height: 100.0%;">Scheme Name: Nkula A upgrade<br>Status: Proposed</div>`)[0];
+                popup_77f9c8349fc682f365b4352a9bc606c8.setContent(html_fab4ae6f4fdcd780a97f8c38c4a9a08a);
+            
+        
+
+        marker_9839ec8c5b35b7a1b372d27b8397b0ca.bindPopup(popup_77f9c8349fc682f365b4352a9bc606c8)
+        ;
+
+        
+    
+    
+            var marker_8cab151caf49d3e0abf96e1ae0c311ad = L.marker(
+                [-16.225106165763172, 35.30453531862058],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_f65aa00184fa33745e89e073fff75135 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8cab151caf49d3e0abf96e1ae0c311ad.setIcon(icon_f65aa00184fa33745e89e073fff75135);
+        
+    
+        var popup_4c554c9767921e63ebd19ae315e37d3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50e1f770af23c29b2239c5419a397c3d = $(`<div id="html_50e1f770af23c29b2239c5419a397c3d" style="width: 100.0%; height: 100.0%;">Scheme Name: Zoa<br>Status: Proposed</div>`)[0];
+                popup_4c554c9767921e63ebd19ae315e37d3a.setContent(html_50e1f770af23c29b2239c5419a397c3d);
+            
+        
+
+        marker_8cab151caf49d3e0abf96e1ae0c311ad.bindPopup(popup_4c554c9767921e63ebd19ae315e37d3a)
+        ;
+
+        
+    
+    
+            var marker_ba418184f5a3e1c8ad0c82c222790444 = L.marker(
+                [-15.889058524628654, 34.7493337057333],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_3963813ee0eea6c7e786f047ae13b27f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ba418184f5a3e1c8ad0c82c222790444.setIcon(icon_3963813ee0eea6c7e786f047ae13b27f);
+        
+    
+        var popup_567cade21070e7dee48ba6d67ed80ea9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01c14833a8af74180dbf042ed8514acd = $(`<div id="html_01c14833a8af74180dbf042ed8514acd" style="width: 100.0%; height: 100.0%;">Scheme Name: Mpatamanga<br>Status: Proposed</div>`)[0];
+                popup_567cade21070e7dee48ba6d67ed80ea9.setContent(html_01c14833a8af74180dbf042ed8514acd);
+            
+        
+
+        marker_ba418184f5a3e1c8ad0c82c222790444.bindPopup(popup_567cade21070e7dee48ba6d67ed80ea9)
+        ;
+
+        
+    
+    
+            var marker_81c092b4efefe7c53be2562800a8f405 = L.marker(
+                [-15.976230196837799, 34.783987810811574],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_2de85856b2eddde3f958f5fe45faa9d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_81c092b4efefe7c53be2562800a8f405.setIcon(icon_2de85856b2eddde3f958f5fe45faa9d3);
+        
+    
+        var popup_ade771007534e0945cc632caee5f8a2e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb198afc0127fbc100e0d9d12036cde1 = $(`<div id="html_bb198afc0127fbc100e0d9d12036cde1" style="width: 100.0%; height: 100.0%;">Scheme Name: Kapichira II<br>Status: Proposed</div>`)[0];
+                popup_ade771007534e0945cc632caee5f8a2e.setContent(html_bb198afc0127fbc100e0d9d12036cde1);
+            
+        
+
+        marker_81c092b4efefe7c53be2562800a8f405.bindPopup(popup_ade771007534e0945cc632caee5f8a2e)
+        ;
+
+        
+    
+    
+            var marker_8d748d4df37ac508c178d00a2f7ce42c = L.marker(
+                [-10.361922853453935, 34.118740876847674],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_092d1abcd95dc8877368d4155c7a53df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d748d4df37ac508c178d00a2f7ce42c.setIcon(icon_092d1abcd95dc8877368d4155c7a53df);
+        
+    
+        var popup_6c83d76ffc439df92d30c696eb3613b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5f767db6874539afaf7616855616296 = $(`<div id="html_c5f767db6874539afaf7616855616296" style="width: 100.0%; height: 100.0%;">Scheme Name: Wovwe<br>Status: Existing</div>`)[0];
+                popup_6c83d76ffc439df92d30c696eb3613b9.setContent(html_c5f767db6874539afaf7616855616296);
+            
+        
+
+        marker_8d748d4df37ac508c178d00a2f7ce42c.bindPopup(popup_6c83d76ffc439df92d30c696eb3613b9)
+        ;
+
+        
+    
+    
+            var marker_22c9a8f89562977b7e169fe2a5d656ad = L.marker(
+                [-10.766034611091824, 34.19056422733356],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_c12d38437e93a97d140aeeae5d55e8d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_22c9a8f89562977b7e169fe2a5d656ad.setIcon(icon_c12d38437e93a97d140aeeae5d55e8d1);
+        
+    
+        var popup_0c6ba0b60aa0614815190a5ebd1242ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df274e31017f526e7c6cf21085a1c052 = $(`<div id="html_df274e31017f526e7c6cf21085a1c052" style="width: 100.0%; height: 100.0%;">Scheme Name: Fufu<br>Status: Proposed</div>`)[0];
+                popup_0c6ba0b60aa0614815190a5ebd1242ea.setContent(html_df274e31017f526e7c6cf21085a1c052);
+            
+        
+
+        marker_22c9a8f89562977b7e169fe2a5d656ad.bindPopup(popup_0c6ba0b60aa0614815190a5ebd1242ea)
+        ;
+
+        
+    
+    
+            var marker_4e7d9bee8b419afcb56dcb61c161818b = L.marker(
+                [-13.174467486546675, 33.716606047729776],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_e2ab743c47e50031068f4868a5506da9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4e7d9bee8b419afcb56dcb61c161818b.setIcon(icon_e2ab743c47e50031068f4868a5506da9);
+        
+    
+        var popup_78fefd14d5b3890d4976abc88e3aecc2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1340c803c9f1a4afb4a10f3d281a7b17 = $(`<div id="html_1340c803c9f1a4afb4a10f3d281a7b17" style="width: 100.0%; height: 100.0%;">Scheme Name: Mbongozi<br>Status: Proposed</div>`)[0];
+                popup_78fefd14d5b3890d4976abc88e3aecc2.setContent(html_1340c803c9f1a4afb4a10f3d281a7b17);
+            
+        
+
+        marker_4e7d9bee8b419afcb56dcb61c161818b.bindPopup(popup_78fefd14d5b3890d4976abc88e3aecc2)
+        ;
+
+        
+    
+    
+            var marker_5317e1eceef246ab207a3acaea486a9d = L.marker(
+                [-13.054758620911507, 33.83797782863331],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_c0dc9a2438862e4bd776dbb3511d3960 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5317e1eceef246ab207a3acaea486a9d.setIcon(icon_c0dc9a2438862e4bd776dbb3511d3960);
+        
+    
+        var popup_51b0a27a7e6575d1f2574615c38989d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07077f37b75b65f06878001183c055d5 = $(`<div id="html_07077f37b75b65f06878001183c055d5" style="width: 100.0%; height: 100.0%;">Scheme Name: Malenga<br>Status: Proposed</div>`)[0];
+                popup_51b0a27a7e6575d1f2574615c38989d8.setContent(html_07077f37b75b65f06878001183c055d5);
+            
+        
+
+        marker_5317e1eceef246ab207a3acaea486a9d.bindPopup(popup_51b0a27a7e6575d1f2574615c38989d8)
+        ;
+
+        
+    
+    
+            var marker_cedd2856996f7c43b634d6e86886dbb7 = L.marker(
+                [-12.869852937125588, 34.0882069073584],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_e724715df8d9b07219468f5323e4d53d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cedd2856996f7c43b634d6e86886dbb7.setIcon(icon_e724715df8d9b07219468f5323e4d53d);
+        
+    
+        var popup_562626d1fb708fe5ed33cf43555f3b75 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_485542c95c1ecdf0dd788ad5c79a2edb = $(`<div id="html_485542c95c1ecdf0dd788ad5c79a2edb" style="width: 100.0%; height: 100.0%;">Scheme Name: Chasombo<br>Status: Proposed</div>`)[0];
+                popup_562626d1fb708fe5ed33cf43555f3b75.setContent(html_485542c95c1ecdf0dd788ad5c79a2edb);
+            
+        
+
+        marker_cedd2856996f7c43b634d6e86886dbb7.bindPopup(popup_562626d1fb708fe5ed33cf43555f3b75)
+        ;
+
+        
+    
+    
+            var marker_ae444e9eeb2e2ba51e5f47c24abb138b = L.marker(
+                [-12.832412041615882, 34.12351240259244],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_505c3edd0d54007599a8aa3377c28573 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ae444e9eeb2e2ba51e5f47c24abb138b.setIcon(icon_505c3edd0d54007599a8aa3377c28573);
+        
+    
+        var popup_d872442e6658193896a8c5999a132b01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bca4531ec03067259bd3dc60fb788b81 = $(`<div id="html_bca4531ec03067259bd3dc60fb788b81" style="width: 100.0%; height: 100.0%;">Scheme Name: Chizuma<br>Status: Proposed</div>`)[0];
+                popup_d872442e6658193896a8c5999a132b01.setContent(html_bca4531ec03067259bd3dc60fb788b81);
+            
+        
+
+        marker_ae444e9eeb2e2ba51e5f47c24abb138b.bindPopup(popup_d872442e6658193896a8c5999a132b01)
+        ;
+
+        
+    
+    
+            var marker_bc28e1cd7210f4fc165fa872b7bf09f4 = L.marker(
+                [-10.9709778787106, 33.87936855522406],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_818f8f94d20a7e5b7062b58ce200cc43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc28e1cd7210f4fc165fa872b7bf09f4.setIcon(icon_818f8f94d20a7e5b7062b58ce200cc43);
+        
+    
+        var popup_f64ce9bd8619b589a4de158e2ab25d8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bd8425c1bb353a7ce0cfffaae7eb83a = $(`<div id="html_8bd8425c1bb353a7ce0cfffaae7eb83a" style="width: 100.0%; height: 100.0%;">Scheme Name: Henga Valley (Vuku Vuku)<br>Status: Proposed</div>`)[0];
+                popup_f64ce9bd8619b589a4de158e2ab25d8c.setContent(html_8bd8425c1bb353a7ce0cfffaae7eb83a);
+            
+        
+
+        marker_bc28e1cd7210f4fc165fa872b7bf09f4.bindPopup(popup_f64ce9bd8619b589a4de158e2ab25d8c)
+        ;
+
+        
+    
+    
+            var marker_20e3d4a009195edf14dddde7d26ac51e = L.marker(
+                [-11.033186336522261, 33.86445196353108],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_b80bb7be0deb01fdb75979e7315fa8c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_20e3d4a009195edf14dddde7d26ac51e.setIcon(icon_b80bb7be0deb01fdb75979e7315fa8c9);
+        
+    
+        var popup_7084a61d9b4e3297d8dcd2e4c866eccc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3ee76a47b8faec56d1e06d7cae44868 = $(`<div id="html_a3ee76a47b8faec56d1e06d7cae44868" style="width: 100.0%; height: 100.0%;">Scheme Name: Rumphi Storage<br>Status: Proposed</div>`)[0];
+                popup_7084a61d9b4e3297d8dcd2e4c866eccc.setContent(html_a3ee76a47b8faec56d1e06d7cae44868);
+            
+        
+
+        marker_20e3d4a009195edf14dddde7d26ac51e.bindPopup(popup_7084a61d9b4e3297d8dcd2e4c866eccc)
+        ;
+
+        
+    
+    
+            var marker_4b53784f69cefeffefaf79a4c3095c4e = L.marker(
+                [-15.334043521935643, 35.00908178588813],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_5b6440561cb1a044146996caf1858f59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4b53784f69cefeffefaf79a4c3095c4e.setIcon(icon_5b6440561cb1a044146996caf1858f59);
+        
+    
+        var popup_792d5e6aebed0a90b7ede55acc5fe0d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8917b4b076fa7f1aa8b4c999350f3b72 = $(`<div id="html_8917b4b076fa7f1aa8b4c999350f3b72" style="width: 100.0%; height: 100.0%;">Scheme Name: Kholombidzo<br>Status: Proposed</div>`)[0];
+                popup_792d5e6aebed0a90b7ede55acc5fe0d8.setContent(html_8917b4b076fa7f1aa8b4c999350f3b72);
+            
+        
+
+        marker_4b53784f69cefeffefaf79a4c3095c4e.bindPopup(popup_792d5e6aebed0a90b7ede55acc5fe0d8)
+        ;
+
+        
+    
+    
+            var marker_626e49c0ea8b81f6fce53fc0436f200c = L.marker(
+                [-9.59420962566175, 33.62850196185683],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_534bad28361f8baf19e5ee3947f91c6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_626e49c0ea8b81f6fce53fc0436f200c.setIcon(icon_534bad28361f8baf19e5ee3947f91c6b);
+        
+    
+        var popup_b06e5a72baf68618761aca6369ee5909 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48b3cbe7f774c30c24e0d1b42d76e7ee = $(`<div id="html_48b3cbe7f774c30c24e0d1b42d76e7ee" style="width: 100.0%; height: 100.0%;">Scheme Name: Manolo<br>Status: Proposed</div>`)[0];
+                popup_b06e5a72baf68618761aca6369ee5909.setContent(html_48b3cbe7f774c30c24e0d1b42d76e7ee);
+            
+        
+
+        marker_626e49c0ea8b81f6fce53fc0436f200c.bindPopup(popup_b06e5a72baf68618761aca6369ee5909)
+        ;
+
+        
+    
+    
+            var marker_44b6fe08bb4825f62c4de3a157ebc219 = L.marker(
+                [-12.227587742620432, 33.99853011041168],
+                {}
+            ).addTo(map_9ba854c39e2dcad891346c0bf3da9af7);
+        
+    
+            var icon_ff7cf16eff374b611bf6be627dec2e98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_44b6fe08bb4825f62c4de3a157ebc219.setIcon(icon_ff7cf16eff374b611bf6be627dec2e98);
+        
+    
+        var popup_c732e108cd4cbe6316276118529033aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b80f155d6155a1ab00d649f3f97005ef = $(`<div id="html_b80f155d6155a1ab00d649f3f97005ef" style="width: 100.0%; height: 100.0%;">Scheme Name: Chimgonda<br>Status: Proposed</div>`)[0];
+                popup_c732e108cd4cbe6316276118529033aa.setContent(html_b80f155d6155a1ab00d649f3f97005ef);
+            
+        
+
+        marker_44b6fe08bb4825f62c4de3a157ebc219.bindPopup(popup_c732e108cd4cbe6316276118529033aa)
+        ;
+
+        
+    
+</script>
+</html>
