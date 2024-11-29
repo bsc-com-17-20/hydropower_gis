@@ -5,6 +5,7 @@ import json
 from pyproj import Proj, transform
 import streamlit as st
 from streamlit_folium import st_folium
+from proximity import proximity_results, status_proximity_results
 
 # Initialize DuckDB connection
 con = duckdb.connect()
@@ -96,6 +97,8 @@ m.save("malawi_hydropower_schemes.html")
 
 st.header("Malawi Hydropower Scheme")
 st_folium(m, width=756)
+proximity_results
+status_proximity_results
 
 print("Map successfully created!")
 con.close()
