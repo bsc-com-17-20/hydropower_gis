@@ -28,11 +28,19 @@ st.markdown("""
         color: #2c3e50;
         font-weight: bold;
     }
+            
+    /* Filter Elements */
+    .stMultiSelect, .stTextInput {
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        color: white;
+    }
     
     /* Download Button Styling */
     .stDownloadButton > button {
         background-color: #3498db;
         color: white;
+        font-weight: bold;
         border-radius: 5px;
         transition: all 0.3s ease;
     }
@@ -40,16 +48,19 @@ st.markdown("""
     .stDownloadButton > button:hover {
         background-color: #2980b9;
         transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     
     /* DataFrame Styling */
     .dataframe {
+        background-color: #f8fafc;
         border: 1px solid #ddd;
         border-radius: 8px;
         overflow: hidden;
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 # Page Title with Gradient Effect
 st.markdown("""
@@ -85,7 +96,7 @@ df = pd.DataFrame(data)
 
 st.sidebar.title("🔍 Hydropower Scheme Filters")
 status_filter = st.sidebar.multiselect(
-    "filter by status", options = df["Status"].unique(),default = df["Status"].unique()
+    "filter by status", options = df["Status"].unique(),default = df["Status"].unique(), help= "select hydropower scheme status to display"
 )
 name_search = st.sidebar.text_input("Search by scheme name", placeholder="Enter scheme name ...")
 
@@ -103,15 +114,25 @@ st.sidebar.download_button(
      mime = "text/csv",
     help="Download the current filtered dataset"
 )
+
+# Statistics Display
+# List-style metrics in the sidebar
+st.sidebar.metric("Total Schemes", len(df))
+st.sidebar.metric("Filtered Schemes", len(filtered_df))
+st.sidebar.metric("Unique Statuses", df["Status"].nunique())
+
 m = folium.Map(location=[-13.5, 34], zoom_start=6,  tiles="CartoDB positron" )
 
 status_colors = { 'Operational': 'green','Under Construction': 'orange', 'Planned': 'blue','Decommissioned': 'red'
 }
 for _, row in filtered_df.iterrows():
-      folium.Marker(
+     status = row['Status']
+     color = status_colors.get(status, 'gray')
+
+     folium.Marker(
         location=[row['Latitude'], row['Longitude']],  
         popup=f"Scheme Name: {properties['Scheme_Nam']}<br>Status: {properties['Status']}",
-        icon=folium.Icon(color="blue"),
+        icon=folium.Icon(color="color"),
     ).add_to(m)
       
 folium_static = m.save("map.html")
@@ -119,6 +140,6 @@ folium_static = m.save("map.html")
 st.components.v1.html(m._repr_html_(), height=600)
 
 # Display DataFrame
-st.subheader("Hydropower Scheme Coordinates")
-st.dataframe(filtered_df)
+st.subheader("📍Hydropower Scheme Coordinates")
+st.dataframe(filtered_df, use_container_width=True, hide_index=True,)
 
