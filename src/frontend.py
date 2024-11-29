@@ -36,6 +36,19 @@ for feature in hydro_data["features"]:
 # Convert data to DataFrame
 df = pd.DataFrame(data)
 
+status_filter = st.sidebar.multiselect(
+    "filter by status", options = df["Status"].unique(),default = df["Status"].unique()
+)
+name_search = st.sidebar.text_input("Search by scheme name")
+
+# filter data base on user input
+
+filtered_df = df[
+    (df["Status"].isin(status_filter))&
+    (df["Scheme Name"].str.contains(name_search,case = False, na = False))
+]
+
+
 # Render Folium map in Streamlit
 st.components.v1.html(m._repr_html_(), height=600)
 
