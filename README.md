@@ -9,3 +9,6 @@ A web application that displays an interactive map showing the locations of all 
 3. run `pip install` or `pip install requirements.txt`
 4. run with `streamlit run ./home.py` or `uv run streamlit run ./home.py`
 5. this require the "hotosm_mwi_roads_lines_geojson.geojson" data set which can be found here "https://data.humdata.org/dataset/hotosm_mwi_roads"
+
+The BenedictZuze GitHub account is linked to this (bsc-com-17-20) account
+Check git log for changes
