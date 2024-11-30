@@ -158,3 +158,27 @@ fig.update_layout(title='Distribution of Scheme Statuses')
 # Display the chart
 st.subheader("Scheme Status Distribution")
 st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+
+
+# Create a new DataFrame with the count of each status
+status_counts = filtered_df['Status'].value_counts().reset_index()
+status_counts.columns = ['Status', 'Count']
+
+# Create a pie chart
+fig_pie = px.pie(status_counts, names='Status', values='Count')
+fig_pie.update_layout(title='Distribution of Scheme Statuses')
+
+# Create a bar chart
+fig_bar = px.bar(status_counts, x='Status', y='Count')
+fig_bar.update_layout(title='Status Distribution')
+
+# Display the charts
+st.subheader("Scheme Status Distribution")
+st.plotly_chart(fig_pie, use_container_width=True)
+
+st.subheader("Status Distribution (Bar Chart)")
+st.plotly_chart(fig_bar, use_container_width=True)
