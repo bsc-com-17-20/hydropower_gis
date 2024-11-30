@@ -7,27 +7,6 @@ from streamlit_folium import st_folium
 from pyproj import Proj, transformer
 from proximity import proximity_results
 
-
-con = duckdb.connect()
-
-# Verify extension files exist
-spatial_extension_path = "./duckdb_extensions/spatial.duckdb_extension"
-httpfs_extension_path = "./duckdb_extensions/httpfs.duckdb_extension"
-
-# Print full paths and check file existence
-print(f"Spatial Extension Full Path: {os.path.abspath(spatial_extension_path)}")
-print(f"HTTPFS Extension Full Path: {os.path.abspath(httpfs_extension_path)}")
-
-if not os.path.exists(spatial_extension_path):
-    raise FileNotFoundError(f"Spatial extension not found at {spatial_extension_path}")
-
-if not os.path.exists(httpfs_extension_path):
-    raise FileNotFoundError(f"HTTPFS extension not found at {httpfs_extension_path}")
-
-# Load spatial extension
-con.sql(f"LOAD '{spatial_extension_path}';")
-con.sql(f"LOAD '{httpfs_extension_path}';")
-
 # Verify HYDRO file exists
 hydro_file = "hydro.json"
 if not os.path.exists(hydro_file):
@@ -92,5 +71,5 @@ for _, row in proximity_results.iterrows():
 
 # Save the map to an HTML file
 m.save("malawi_hydropower_proximity_schemes.html")
-st.header("Proximity")
+st.header("Proximity Map of Hydro Stations in Malawi")
 st_folium(m, width=756)

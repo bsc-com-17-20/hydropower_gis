@@ -14,22 +14,25 @@ from proximity import (
 import networkx as nx
 import time
 import shapely.wkt
+import duckdb
 
 # Verify HYDRO file exists
 hydro_file = "hydro.json"
 if not os.path.exists(hydro_file):
     raise FileNotFoundError(f"HYDRO file not found at {hydro_file}")
 
-print("Load data")
-start = time.time()
-# Load the data
-gdf = gpd.read_file("hotosm_mwi_roads_lines_geojson.geojson")
-# Load the geojson data
-with open("hydro.json") as f:
-    hydro_data = json.load(f)
-end = time.time()
-print(end - start)
-print("Data Loaded")
+with st.spinner("Loading Road and Hydro Station Data"):
+    print("Load data")
+    start = time.time()
+    # Load the data
+    gdf = gpd.read_file("hotosm_mwi_roads_lines_geojson.geojson")
+    # Load the geojson data
+    with open("hydro.json") as f:
+        hydro_data = json.load(f)
+    end = time.time()
+    print(end - start)
+    print("Data Loaded")
+
 
 # Define the projection of the input coordinates (EPSG:22236)
 input_proj = Proj(init="epsg:22236")
@@ -42,6 +45,12 @@ output_proj = Proj(init="epsg:4326")
 print("Filter data")
 start = time.time()
 major_roads = gdf[gdf["highway"].isin(["primary", "secondary", "tertiary"])]
+major_roads2 = gdf[gdf["highway"].isin(["primary", "secondary", "tertiary"])]
+with st.spinner("Added road data to database:"):
+    con = duckdb.connect("proximity_test")
+    major_roads2["geometry"] = major_roads2["geometry"].apply(lambda x: x.wkt)
+    con.execute("CREATE TABLE IF NOT EXISTS major_roads AS SELECT * FROM major_roads2")
+    pass
 end = time.time()
 print(end - start)
 print("Data filtered")

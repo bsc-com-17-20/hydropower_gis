@@ -19,7 +19,7 @@ con = duckdb.connect(":memory:")
 # Create a table from the GeoJSON data
 con.execute(
     """
-CREATE TABLE malawi_places (
+CREATE TABLE IF NOT EXISTS malawi_places (
     fid INTEGER,
     NAME VARCHAR,
     ADMIN1 VARCHAR,
