@@ -1,6 +1,5 @@
 import json
 import os
-import duckdb
 import folium
 import streamlit as st
 from streamlit_folium import st_folium
@@ -23,7 +22,7 @@ input_proj = Proj(init="epsg:22236")
 output_proj = Proj(init="epsg:4326")
 
 # Create a Folium map centered around Malawi
-m = folium.Map(location=[-13.5, 34], zoom_start=6)
+m = folium.Map(location=[-13.5, 34], zoom_start=7)
 
 # Prepare coordinates and proximity data
 scheme_locations = {}

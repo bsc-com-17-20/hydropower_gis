@@ -41,16 +41,9 @@ input_proj = Proj(init="epsg:22236")
 output_proj = Proj(init="epsg:4326")
 
 # Filter out roads of type 'path'
-# filtered_gdf = gdf[gdf["highway"] != "path"]
 print("Filter data")
 start = time.time()
 major_roads = gdf[gdf["highway"].isin(["primary", "secondary", "tertiary"])]
-major_roads2 = gdf[gdf["highway"].isin(["primary", "secondary", "tertiary"])]
-with st.spinner("Added road data to database:"):
-    con = duckdb.connect("proximity_test")
-    major_roads2["geometry"] = major_roads2["geometry"].apply(lambda x: x.wkt)
-    con.execute("CREATE TABLE IF NOT EXISTS major_roads AS SELECT * FROM major_roads2")
-    pass
 end = time.time()
 print(end - start)
 print("Data filtered")
@@ -69,17 +62,17 @@ st.header("Road Network Metrics")
 "Network density:", nx.density(G)
 
 # Basic network statistics
-st.header("Basic Road Netwrok Statistics")
+st.header("Basic Road Network Statistics")
 "Total road segments:", len(major_roads)
 "Road type distribution:", major_roads["highway"].value_counts()
 
 "Proximity Analysis for Individual Schemes:"
 proximity_results
 
-"Proximity Analysis for Buffer Schemes:"
+"Proximity Analysis for Buffered Schemes:"
 buffer_proximity_results
 
-"\n\nStatus-based Proximity Analysis:"
+"Status-based Proximity Analysis:"
 status_proximity_results
 
 

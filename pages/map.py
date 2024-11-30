@@ -45,7 +45,7 @@ for feature in hydro_data["features"]:
 # Save the map to an HTML file
 m.save("malawi_hydropower_schemes.html")
 
-st.header("Malawi Hydropower Scheme")
+st.header("Malawi Hydro Power Scheme")
 st_folium(m, width=756)
 proximity_results
 status_proximity_results

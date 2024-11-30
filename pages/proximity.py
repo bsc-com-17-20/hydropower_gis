@@ -3,7 +3,7 @@ import duckdb
 import os
 import streamlit as st
 
-st.header("Proximity Analysis of Hydropower Stations in Malawi")
+st.header("Proximity Analysis Tables of Hydropower Stations in Malawi")
 
 # Connect to an in-memory database
 con = duckdb.connect("proximity_test")
