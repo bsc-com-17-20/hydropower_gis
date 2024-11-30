@@ -3,6 +3,7 @@ import folium
 import streamlit as st
 import json
 import pandas as pd
+import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Malawi Hydropower Map", layout="wide", page_icon=":water_wave:", initial_sidebar_state="expanded")
 
@@ -143,3 +144,13 @@ st.components.v1.html(m._repr_html_(), height=600)
 st.subheader("📍Hydropower Scheme Coordinates")
 st.dataframe(filtered_df, use_container_width=True, hide_index=True,)
 
+
+
+# Create a pie chart
+fig, ax = plt.subplots(figsize=(8, 6))
+ax.pie(filtered_df['Status'].value_counts(), labels=filtered_df['Status'].unique(), autopct='%1.1f%%')
+ax.set_title('Distribution of Scheme Statuses')
+
+# Display the chart
+st.subheader("Scheme Status Distribution")
+st.pyplot(fig)
