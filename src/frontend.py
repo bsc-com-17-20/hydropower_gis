@@ -149,7 +149,6 @@ st.dataframe(filtered_df, use_container_width=True, hide_index=True,)
 
 
 
-
 # Create a new DataFrame with the count of each status
 status_counts = filtered_df['Status'].value_counts().reset_index()
 status_counts.columns = ['Status', 'Count']
@@ -171,5 +170,9 @@ data_melted = pd.melt(data_df, id_vars=['Scheme Name', 'Status'], value_vars=['E
 fig = px.bar(data_melted, x='Scheme Name', y='value', color='variable', barmode='group')
 fig.update_layout(title='Existing vs Proposed Values', xaxis_title='Scheme Name', yaxis_title='Value')
 
-# Display the chart
+# Display the charts
+st.subheader("Scheme Status Distribution")
+st.plotly_chart(fig_pie, use_container_width=True)
+
+st.subheader("Existing vs Proposed Values")
 st.plotly_chart(fig, use_container_width=True)
