@@ -6,7 +6,11 @@ from pyproj import Proj, transformer
 import streamlit as st
 from streamlit_folium import st_folium
 from branca.colormap import LinearColormap
-from proximity import proximity_results, buffer_proximity_results
+from proximity import (
+    proximity_results,
+    buffer_proximity_results,
+    status_proximity_results,
+)
 import networkx as nx
 import time
 import shapely.wkt
@@ -50,15 +54,25 @@ for idx, road in major_roads.iterrows():
         G.add_edge(tuple(coords[i]), tuple(coords[i + 1]))
 
 # Network metrics
-st.header("Network Metrics")
+st.header("Road Network Metrics")
 "Total nodes:", G.number_of_nodes()
 "Total edges:", G.number_of_edges()
 "Network density:", nx.density(G)
 
 # Basic network statistics
-st.header("Basic Netwrok Statistics")
+st.header("Basic Road Netwrok Statistics")
 "Total road segments:", len(major_roads)
 "Road type distribution:", major_roads["highway"].value_counts()
+
+"Proximity Analysis for Individual Schemes:"
+proximity_results
+
+"Proximity Analysis for Buffer Schemes:"
+buffer_proximity_results
+
+"\n\nStatus-based Proximity Analysis:"
+status_proximity_results
+
 
 # Calculate road segment lengths
 # st.header("Road Segment length")
@@ -198,18 +212,21 @@ def add_buffer_results(m, buffer_results):
                 # Assuming ST_AsText returns WKT format
                 buffer_wkt = row["buffer_geometry"]
 
-                # Convert WKT to GeoJSON for Folium
                 buffer_geom = shapely.wkt.loads(buffer_wkt)
 
+                # Convert to GeoJSON
                 buffer_geojson = {
                     "type": "Feature",
-                    "geometry": json.loads(json.dumps(buffer_geom.__geo_interface__)),
-                    "properties": {},
+                    "geometry": {
+                        "type": buffer_geom.geom_type,
+                        "coordinates": list(buffer_geom.exterior.coords),
+                    },
+                    "properties": {"name": scheme_name},
                 }
 
-                # Create a GeoJSON feature for the buffer
+                # Create buffer on the map
                 folium.GeoJson(
-                    buffer_geojson.__geo_interface__,
+                    buffer_geojson,
                     style_function=lambda x: {
                         "fillColor": "green",
                         "color": "green",
@@ -265,7 +282,7 @@ with st.spinner("Cooking..."):
     road_map = add_roads_to_map(road_map, major_roads, color_dict)
     road_map = add_hydro_stations_to_map(road_map, hydro_data)
     road_map = add_proximity_results(road_map)
-    road_map = add_buffer_results(road_map, buffer_proximity_results)
+    # road_map = add_buffer_results(road_map, buffer_proximity_results)
     st_folium(road_map, width=756)
 
 # Add a legend (optional)
@@ -277,7 +294,8 @@ legend_html = """
      ">
      &nbsp; Road Types <br>
      &nbsp; <i class="fa fa-road" style="color:blue"></i> Tertiary <br>
-     &nbsp; <i class="fa fa-road" style="color:green"></i> Path
+     &nbsp; <i class="fa fa-road" style="color:gold"></i> Secondary <br>
+     &nbsp; <i class="fa fa-road" style="color:red"></i> Primary <br>
      </div>
      """
 road_map.get_root().html.add_child(folium.Element(legend_html))
