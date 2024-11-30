@@ -150,6 +150,7 @@ st.dataframe(filtered_df, use_container_width=True, hide_index=True,)
 
 
 
+
 # Create a new DataFrame with the count of each status
 status_counts = filtered_df['Status'].value_counts().reset_index()
 status_counts.columns = ['Status', 'Count']
@@ -162,24 +163,24 @@ fig_pie.update_layout(title='Distribution of Scheme Statuses')
 data_df = pd.DataFrame(data)
 
 # Rename the columns
-data_df.columns = ['Scheme Name', 'Status', 'Existing', 'Proposed']
+data_df.columns = ['Scheme', 'Status', 'Longitude', 'Latitude']
 
-# Melt the DataFrame
-data_melted = pd.melt(data_df, id_vars=['Scheme Name', 'Status'], value_vars=['Existing', 'Proposed'])
+
+# Add "Kamuzu Barrage" to the charts
+#data_df.loc[len(data_df.index)] = ['Kamuzu Barrage', 'Existing', 737909.0144, 8333981.8011]
 
 # Create a bar chart with two categories
-fig_bar = px.bar(data_melted, x='Scheme Name', y='value', color='variable', barmode='group')
-fig_bar.update_layout(title='Existing vs Proposed Values', xaxis_title='Scheme Name', yaxis_title='Value')
+#fig_bar.update_layout(title='Longitude by Scheme and Status', xaxis_title='Scheme', yaxis_title='Longitude')
 
 # Create a line chart
-fig_line = px.line(data_melted, x='Scheme Name', y='value', color='variable')
-fig_line.update_layout(title='Trend of Existing and Proposed Values', xaxis_title='Scheme Name', yaxis_title='Value')
+#fig_line = px.line(data_df, x='Scheme', y='Latitude', color='Status')
+#fig_line.update_layout(title='Latitude by Scheme and Status', xaxis_title='Scheme', yaxis_title='Latitude')
 
 # Display the charts
 st.subheader("Scheme Status Distribution")
 st.plotly_chart(fig_pie, use_container_width=True)
 
-st.subheader("Existing vs Proposed Values")
-col1, col2 = st.columns(2)
-col1.plotly_chart(fig_bar, use_container_width=True)
-col2.plotly_chart(fig_line, use_container_width=True)
+#st.subheader("Longitude by Scheme and Status")
+#col1, col2 = st.columns(2)
+#col1.plotly_chart(fig_bar, use_container_width=True)
+#col2.plotly_chart(fig_line, use_container_width=True)
