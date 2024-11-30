@@ -147,20 +147,6 @@ st.dataframe(filtered_df, use_container_width=True, hide_index=True,)
 
 
 
-# Create a new DataFrame with the count of each status
-status_counts = filtered_df['Status'].value_counts().reset_index()
-status_counts.columns = ['Status', 'Count']
-
-# Create a pie chart
-fig = px.pie(status_counts, names='Status', values='Count')
-fig.update_layout(title='Distribution of Scheme Statuses')
-
-# Display the chart
-st.subheader("Scheme Status Distribution")
-st.plotly_chart(fig, use_container_width=True)
-
-
-
 
 
 
@@ -172,13 +158,18 @@ status_counts.columns = ['Status', 'Count']
 fig_pie = px.pie(status_counts, names='Status', values='Count')
 fig_pie.update_layout(title='Distribution of Scheme Statuses')
 
-# Create a bar chart
-fig_bar = px.bar(status_counts, x='Status', y='Count')
-fig_bar.update_layout(title='Status Distribution')
+# Convert the list to a DataFrame
+data_df = pd.DataFrame(data)
 
-# Display the charts
-st.subheader("Scheme Status Distribution")
-st.plotly_chart(fig_pie, use_container_width=True)
+# Rename the columns
+data_df.columns = ['Scheme Name', 'Status', 'Existing', 'Proposed']
 
-st.subheader("Status Distribution (Bar Chart)")
-st.plotly_chart(fig_bar, use_container_width=True)
+# Melt the DataFrame
+data_melted = pd.melt(data_df, id_vars=['Scheme Name', 'Status'], value_vars=['Existing', 'Proposed'])
+
+# Create a bar chart with two categories
+fig = px.bar(data_melted, x='Scheme Name', y='value', color='variable', barmode='group')
+fig.update_layout(title='Existing vs Proposed Values', xaxis_title='Scheme Name', yaxis_title='Value')
+
+# Display the chart
+st.plotly_chart(fig, use_container_width=True)
