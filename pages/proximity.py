@@ -3,10 +3,10 @@ import duckdb
 import os
 import streamlit as st
 
-st.header("Proximity Analysis of Hydropower Stations in Malawi")
+st.header("Proximity Analysis Tables of Hydropower Stations in Malawi")
 
 # Connect to an in-memory database
-con = duckdb.connect(":memory:")
+con = duckdb.connect("proximity_test")
 
 # Verify extension files exist
 spatial_extension_path = "./duckdb_extensions/spatial.duckdb_extension"
@@ -26,7 +26,6 @@ if not os.path.exists(httpfs_extension_path):
 con.sql(f"LOAD '{spatial_extension_path}';")
 con.sql(f"LOAD '{httpfs_extension_path}';")
 
-
 # Load the GeoJSON data
 with open("hydro.json", "r") as file:
     hydro_data = json.load(file)
@@ -34,7 +33,7 @@ with open("hydro.json", "r") as file:
 # Create a table with hydropower scheme data
 con.execute(
     """
-CREATE TABLE hydropower_schemes (
+CREATE TABLE IF NOT EXISTS hydropower_schemes (
     scheme_name VARCHAR,
     status VARCHAR,
     longitude DOUBLE,
@@ -44,19 +43,19 @@ CREATE TABLE hydropower_schemes (
 )
 
 # Insert data from the GeoJSON
-for feature in hydro_data["features"]:
-    con.execute(
-        """
-    INSERT INTO hydropower_schemes 
-    VALUES (?, ?, ?, ?)
-    """,
-        (
-            feature["properties"]["Scheme_Nam"],
-            feature["properties"]["Status"],
-            feature["geometry"]["coordinates"][0],
-            feature["geometry"]["coordinates"][1],
-        ),
-    )
+# for feature in hydro_data["features"]:
+#     con.execute(
+#         """
+#     INSERT INTO hydropower_schemes
+#     VALUES (?, ?, ?, ?)
+#     """,
+#         (
+#             feature["properties"]["Scheme_Nam"],
+#             feature["properties"]["Status"],
+#             feature["geometry"]["coordinates"][0],
+#             feature["geometry"]["coordinates"][1],
+#         ),
+#     )
 
 # Proximity Analysis using ST_Distance (requires spatial extension)
 proximity_query = """
