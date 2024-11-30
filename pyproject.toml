@@ -4,4 +4,6 @@ version = "0.1.0"
 description = "A web application that displays an interactive map showing the locations of all hydropower schemes in Malawi. Users can click on markers to view details about each scheme, including its status (existing or proposed) and other relevant information."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ruff>=0.8.1",
+]
