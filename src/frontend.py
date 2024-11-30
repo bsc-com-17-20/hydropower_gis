@@ -3,6 +3,7 @@ import folium
 import streamlit as st
 import json
 import pandas as pd
+import plotly.express as px
 
 st.set_page_config(page_title="Malawi Hydropower Map", layout="wide", page_icon=":water_wave:", initial_sidebar_state="expanded")
 
@@ -143,3 +144,43 @@ st.components.v1.html(m._repr_html_(), height=600)
 st.subheader("📍Hydropower Scheme Coordinates")
 st.dataframe(filtered_df, use_container_width=True, hide_index=True,)
 
+
+
+
+
+
+
+
+# Create a new DataFrame with the count of each status
+status_counts = filtered_df['Status'].value_counts().reset_index()
+status_counts.columns = ['Status', 'Count']
+
+# Create a pie chart
+fig_pie = px.pie(status_counts, names='Status', values='Count')
+fig_pie.update_layout(title='Distribution of Scheme Statuses')
+
+# Convert the list to a DataFrame
+data_df = pd.DataFrame(data)
+
+# Rename the columns
+data_df.columns = ['Scheme', 'Status', 'Longitude', 'Latitude']
+
+
+# Add "Kamuzu Barrage" to the charts
+#data_df.loc[len(data_df.index)] = ['Kamuzu Barrage', 'Existing', 737909.0144, 8333981.8011]
+
+# Create a bar chart with two categories
+#fig_bar.update_layout(title='Longitude by Scheme and Status', xaxis_title='Scheme', yaxis_title='Longitude')
+
+# Create a line chart
+#fig_line = px.line(data_df, x='Scheme', y='Latitude', color='Status')
+#fig_line.update_layout(title='Latitude by Scheme and Status', xaxis_title='Scheme', yaxis_title='Latitude')
+
+# Display the charts
+st.subheader("Scheme Status Distribution")
+st.plotly_chart(fig_pie, use_container_width=True)
+
+#st.subheader("Longitude by Scheme and Status")
+#col1, col2 = st.columns(2)
+#col1.plotly_chart(fig_bar, use_container_width=True)
+#col2.plotly_chart(fig_line, use_container_width=True)
